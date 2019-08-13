@@ -1,0 +1,14 @@
+<body class="d-flex flex-column h-100">
+  <div class="container">
+    <main role="main" class="my-auto">
+    <h1 class="mt-5"><%= @event.title.capitalize%></h1>
+    <p>Description :<br/>
+    <%= @event.description%>
+    </p>
+    <p>Prix : <%= @event.price %></p>
+    <p>Date de début : <%= @event.start_date %></p>
+    <p>durée : <%= @event.duration %> minutes</p>
+    <p>Ville : <%= @event.location %></p>
+    </main>
+  </div>
+</body>

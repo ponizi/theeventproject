@@ -1,0 +1,30 @@
+<!-- For demo purpose -->
+<div class="row">
+    <div class="col-lg-7 mx-auto text-white text-center pt-5">
+        <h1 class="display-4">Mon compte</h1>
+    </div>
+</div><!-- End -->
+            <h5>Coordonnées</h5>
+                 Email : <%= current_user.email %>
+                <div class="py-4">
+                    <h5 class="mb-3">Events crées</h5>
+                    <div class="p-4 bg-light rounded shadow-sm">
+                    <div class="container">
+                    <div class="row">
+                      <% @events.each_with_index do |event,index| %>
+                      <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title" style="text-align: center"><small>            
+                            <%=link_to "#{event.title}", event_path(event.id), :class => "nav-link" %>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Prix:  <%= event.price %>€ </br> Lieu: <%= event.location %></h6>
+                            <a class="btn btn-primary" href="<%=event_path(event.id)%>"  role="button">Voir l'event</a></small>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
+                    </div>
+                  </div>
+                    </div>
+                </div>

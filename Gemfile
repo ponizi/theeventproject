@@ -5,6 +5,8 @@ ruby '2.5.1'
 gem 'bootstrap'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'activerecord-reset-pk-sequence'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

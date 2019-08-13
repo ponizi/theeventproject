@@ -1,2 +1,27 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hood Event</h1>
+          <p>Les évènements les plus G de France</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
+      </div>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% @events.each_with_index do |event,index| %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">              
+              <%=link_to "#{event.title}", event_path(event.id), :class => "nav-link" %>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">Prix:  <%= event.price %>€ </br> Lieu: <%= event.location %></h6>
+              <a class="btn btn-primary" href="<%=event_path(event.id)%>"  role="button">Voir l'event</a>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

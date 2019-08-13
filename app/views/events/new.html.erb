@@ -1,0 +1,38 @@
+<%= form_for(@event) do |f| %>
+
+  <%= form_for @event do |f| %>
+    <div class="form-group">
+        <label>Titre</label>
+        <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <%= f.text_area :description, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <label>Date de début</label>
+        <%= f.text_field :start_date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <label>Durée</label>
+        <%= f.text_area :duration, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <label>Prix</label>
+        <%= f.text_field :price, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <label>Lieu</label>
+        <%= f.text_area :location, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary"> Ajouter</button>
+    </div>
+
+<% end %><% end %>
